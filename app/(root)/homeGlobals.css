@@ -1,0 +1,165 @@
+/* Import Tailwind CSS and Poppins font */
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900&display=swap");
+
+@font-face {
+  font-family: "FashionWacks";
+  src: url("/fonts/FashionWacks-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Design Tokens */
+:root {
+  /* Colors */
+  --background: #d9d9d9;
+  --foreground: #232323;
+
+  --bg-primary:var(--foreground);
+  --bg-accent-300: #d9d9d9;
+  --bg-accent-400: #a0ba9a;
+  --bg-accent-500: #c5c5c5;
+  --text-primary-300: #232323;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Font Families */
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-fashionwacks: "FashionWacks", sans-serif;
+
+  /* Font Sizes (in rem units) */
+  --fs-200: 0.795rem;
+  --fs-300: 0.938rem;
+  --fs-400: 1rem;
+  --fs-600: 3.125rem;
+  --fs-900: clamp(20px, 18vw, 14rem);
+
+  /* Semantic Font Sizes */
+  --fs-body: var(--fs-300);
+  --fs-nav: var(--fs-300);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--text-primary-300);
+  font-size: var(--fs-body);
+  font-family: var(--ff-poppins);
+}
+
+/* Scrollbar Styling (WebKit browsers only) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 12px;
+}
+
+/* Respect User Preferences for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+.container {
+  margin-inline: auto;
+  max-width: 1440px;
+  width: min(90%, 70.5rem);
+}
+
+/* Colors Utilities */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+.bg-accent-300 {
+  background-color: var(--bg-accent-300);
+}
+.bg-accent-400 {
+  background-color: var(--bg-accent-400);
+}
+.bg-accent-500 {
+  background-color: var(--bg-accent-500);
+}
+.text-primary-300 {
+  color: var(--text-primary-300);
+}
+
+/*Font Family Utilities */
+.ff-poppins {
+  font-family: var(--ff-poppins);
+}
+.ff-fashionwacks {
+  font-family: var(--ff-fashionwacks);
+}
+
+/* Font Weight Utilities */
+.fw-light {
+  font-weight: var(--fw-light);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-extrabold {
+  font-weight: var(--fw-extrabold);
+}
+
+/* Font Size Utilities */
+.fs-body {
+  font-size: var(--fs-body);
+}
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+@media (min-width: 768px) {
+  .md\:fs-300 {
+    font-size: var(--fs-300);
+  }
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-900 {
+  font-size: var(--fs-900);
+}
