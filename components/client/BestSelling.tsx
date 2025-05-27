@@ -34,7 +34,7 @@ const BestSelling = () => {
   };
 
   return (
-    <section className="bg-accent-400 py-8 sm:py-16">
+    <section className="py-8 sm:py-16">
       <div className="container">
         <h1 className="fw-regular ff-fashionwacks fs-600 text-center mb-8">
           Best Selling
